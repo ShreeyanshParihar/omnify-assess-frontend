@@ -31,15 +31,15 @@ export default class MyApp extends App {
     let comment = document.createComment(``);
     document.insertBefore(comment, document.documentElement);
   }
-  static async getInitialProps({ Component, router, ctx }) {
-    let pageProps = {};
+  // static async getInitialProps({ Component, router, ctx }) {
+  //   let pageProps = {};
 
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
+  //   if (Component.getInitialProps) {
+  //     pageProps = await Component.getInitialProps(ctx);
+  //   }
 
-    return { pageProps };
-  }
+  //   return { pageProps };
+  // }
   render() {
     const { Component, pageProps } = this.props;
 
