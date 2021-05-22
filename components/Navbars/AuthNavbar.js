@@ -4,29 +4,36 @@ import { useRouter } from "next/router";
 import AddEvent from "components/AddEvent/AddEvent";
 
 
-export default function Navbar(props) {
+export async function getServerSideProps(context) {
+  return {
+    props: {query:context.query},
+  }
+}
+
+
+export default function Navbar({query}) {
+
+
   const [navbarOpen, setNavbarOpen] = useState(false);
   const router = useRouter();
   const [name, setName] = useState('');
-  const [userId, setUserId] = useState(null);
+ 
  
 
 
   useEffect(() => {
 
-    if (!sessionStorage.length) {
+    if (!sessionStorage.getItem('id')) {
       router.push('/login');
     } else {
       setName(sessionStorage.getItem('name'));
-      setUserId(sessionStorage.getItem('id'));
     }
 
 
-  }, []);
+  }, [router]);
 
 
   const logout = async () => {
-
     sessionStorage.clear();
     router.replace('/login');
   }

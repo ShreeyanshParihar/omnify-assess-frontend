@@ -35,7 +35,7 @@ export default function Login() {
         
             sessionStorage.setItem('id',data['id']);
             sessionStorage.setItem('name',data['name']);
-            setTimeout(()=>router.replace('/'),2000);
+            setTimeout(()=>router.replace('/home'),2000);
           }else{
             setSuccess(false);
             setTimeout(()=>setSuccess(null),2000);
@@ -61,7 +61,7 @@ export default function Login() {
 
 
   return (
-    <>
+    <Auth>
       <div className="container mx-auto px-4 h-full">
         <div className="flex content-center items-center justify-center h-full">
           <div className="w-full lg:w-4/12 px-4">
@@ -136,8 +136,8 @@ export default function Login() {
           </div>
         </div>
       </div>
-    </>
+    </Auth>
   );
 }
 
-Login.layout = Auth;
+

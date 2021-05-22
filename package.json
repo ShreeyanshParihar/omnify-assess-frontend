@@ -10,10 +10,10 @@
     "formik": "^2.2.7",
     "moment": "^2.29.1",
     "next": "^10.2.2",
+    "next-plugin-antd-less": "^1.2.1",
     "react": "17.0.1",
     "react-big-calendar": "^0.33.3",
     "react-dom": "17.0.1",
-    "react-scripts": "4.0.3",
     "tailwindcss": "2.0.4"
   },
   "scripts": {
@@ -23,26 +23,9 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm run dev",
     "build:tailwind": "tailwind build styles/index.css -o styles/tailwind.css"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "optionalDependencies": {
-    "typescript": "4.2.3"
-  },
   "devDependencies": {
     "autoprefixer": "10.2.5",
+    "babel-plugin-import": "^1.13.3",
     "css-loader": "^5.2.5",
     "postcss": "^8.3.0"
   }

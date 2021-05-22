@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState, Fragment } from "react";
 import { Listbox } from '@headlessui/react';
 import { TimePicker } from 'antd';
-import 'antd/dist/antd.css';
+//import 'antd/dist/antd.css';
 import moment from 'moment';
 import { Modal} from 'antd';
 import { Values } from 'utils/utils';
