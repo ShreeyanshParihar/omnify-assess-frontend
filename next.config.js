@@ -10,6 +10,19 @@ module.exports = withAntdLess({
   // optional https://github.com/webpack-contrib/css-loader#object
   cssLoaderOptions: {},
 
+  module: {
+    rules: [
+     {
+      test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|)$/i,
+      use: [
+        {
+          loader: "file-loader",
+        }
+      ],
+    },
+    ]
+  },
+
   // Other Config Here...
 
   webpack(config) {
